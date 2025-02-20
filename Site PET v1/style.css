@@ -13,7 +13,7 @@
 }
 nav{
     display: flex;
-    padding: 4% 6%;
+    padding: 2% 3%;
     justify-content: space-between;
     align-items: center;
 }
@@ -61,8 +61,11 @@ nav img{
     font-size: 62px;
 }
 .text-box p{
+    text-align: center;
+    margin: auto;
+    width: 100%;
     margin: 10px 0 40px;
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
 }
 .hero-btn{
