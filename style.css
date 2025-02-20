@@ -229,11 +229,12 @@ h3{
     padding-top: 100px;
 }
 
-.news-col{
+.news-col {
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
+    margin: 0 auto;
 }
 
 .news-col img{
