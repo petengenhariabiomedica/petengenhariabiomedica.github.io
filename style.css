@@ -126,6 +126,7 @@ nav .fa{
     text-align: center;
     padding-top: 100px;
 }
+
 h1{
     font-size: 36px;
     font-weight: 600;
@@ -295,25 +296,67 @@ h3{
 }
 
 .comments-col .fa {
-    color: rgba(18, 7, 172, 0.76);
+    color: #1207acc2;
     box-shadow: 0 0 20px 0 rgba(18, 7, 172, 0.76);
 }
 
+/*-- Contato PET --*/
 
+.contato{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/TodosPET.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
 
+.contato h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
 
+@media(max-width: 700px){
+    .contato h1{
+        font-size: 24px;
+    }
+}
 
+.sobre{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+} 
 
+.sobre h4{
+    font-size: 34px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
 
+.icones i{
+    font-size: 30px;
+    margin: 0 10px;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
 
+.icones i:hover {
+    color: #007bff;
+    transition: 0.5s;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
 
-
-
-
-
-
-
-
-
-
+.icones .fa{
+    color: #1207acc2;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
 
