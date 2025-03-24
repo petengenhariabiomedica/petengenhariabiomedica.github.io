@@ -192,25 +192,112 @@ h3{
     }
 }
 
-.petianos{
+/*---------- Petianos ----------*/
+
+/* Fonte Montserrat */
+@import url('https://fonts.googleapis.co/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.petianos-text {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
-.petianos-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
+.petianos-text p{
+    padding: 20px;
+}
+
+.petianos-text .p{
+    padding-bottom: 10px;
+}
+
+.card-list .card-item .user-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #000000;
+    padding: 4px;
+}
+
+.card-list .card-item{
+    color: #000000;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(209, 209, 209, 0.219);
+    border: 1px solid rgba(17, 0, 255, 0.2);
+}
+
+.card-item:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 20px 0 rgba(17, 0, 255, 0.2);
+}
+
+.card-list .card-item .user-profession {
+    font-size: 1.15rem;
+    color: #000000;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+
+.card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #030728;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.card-list .card-item .message-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
+    color: #00ff00;
+}
+
+.slider-wrapper {
     overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
 }
 
-.petianos-col img{
-    width: 100%;
-    display: block;
+.slider-wrapper .swiper-pagination-bullet {
+  background: #4658ff;
+  height: 15px;
+  width: 15px;  
 }
+
+
+.slider-wrapper .swiper-slide-button {
+    color: #4658ff;
+    margin-top: -50px;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover{
+    color: #4658ff;
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button:hover{
+        display: none;
+    }
+}
+
+/*------------------------------*/
+
 
 .layer{
     background: transparent;
@@ -361,16 +448,15 @@ h3{
 .icones i{
     font-size: 30px;
     margin: 0 10px;
-    color: #fff;
+    color: #1207acc2;
     transition: 0.5s ease-in-out;
 }
 
 .icones i:hover {
     color: #007bff;
     transition: 0.5s;
-    margin: 0 13px;
+    margin: 0 10px;
     cursor: pointer;
-    padding: 18px 0;
 }
 
 .icones .fa{

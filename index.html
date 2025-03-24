@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" contect="with=device-width, initial-
-    scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PET - Engenharia Biomédica</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?
-    family=Poppings:wght@100;200;300;400;600;700&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</link>
+    <link href="https://fonts.googleapis.com/css2?family=Poppings:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Link pro SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <!-- Link Swipper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <!-- Corpo do site + Imagem de fundo -->
@@ -21,7 +21,7 @@
          <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="petengenhariabiomedica.github.io">INÍCIO</a></li>
+                <li><a href="https://petengenhariabiomedica.github.io">INÍCIO</a></li>
                 <li><a href="about.html">SOBRE</a></li>
                 <li><a href="" >NOTÍCIAS </a></li>
                 <li><a href="https://linktr.ee/petebio">LINKTREE</a></li>
@@ -71,39 +71,172 @@
     </div>
 </section>
 
-
+<hr style="border: 1px solid #333; margin: 40px 0;">
 
 <!-- SESSÃO A CONSTRUIR - SOBRE OS PETIANOS -->
-<!-- <section class="petianos">
+<section class="petianos-text">
     <h1>Atuais Petianos</h1>
     <p>Um petiano é o estudante que faz parte do Programa de Educação Tutorial (PET), 
         participando de projetos que integram ensino, pesquisa e extensão, com foco no 
         desenvolvimento de soluções inovadoras e no impacto social.</p>
+        
+        <div class="container-swiper">
+            <div class="swiper slider-wrapper">
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Renato.jpeg" alt="" class="user-image"> <!-- Renato -->
+                        <h2 class="user-name">Renato - 9º Período</h2>
+                        <p class="user-profession">Engenharia Clínica e <br>Prototipagem</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/re_natos/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/renato-souza-santana-filho-05b368225/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:renato.santana@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
 
-    <div class="row">
-        <div class="petianos-col">
-            <img src="images/Cachorro Pidão.jpg">
-            <div class="layer">
-                <h3>Heitor</h3>
-            </div>
-        </div>
-        <div class="petianos-col">
-            <img src="images/Cachorro Pidão.jpg">
-            <div class="layer">
-                <h3>Luiz</h3>
-            </div>
-        </div>
-        <div class="petianos-col">
-            <img src="images/Cachorro Pidão.jpg">
-            <div class="layer">
-                <h3>Stephan</h3>
-            </div>
-        </div>
-    </div>
-</section>
--->
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Heitor.jpg" alt="" class="user-image"> <!-- Heitor -->
+                        <h2 class="user-name">Heitor - 8º Período</h2>
+                        <p class="user-profession">Neuroengenharia e <br>Imagens Médicas</p>
+                        <div class="icones">
+                            <a href="https://www.instagram.com/hpnunees/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/heitorpnfc/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:heitorpnfcthor@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
 
-<hr style="border: 1px solid #4532; margin: 40px 0;">
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Izabella.png" alt="" class="user-image"> <!-- Izabella -->
+                        <h2 class="user-name">Izabella - 8º Período</h2>
+                        <p class="user-profession">Bioimpressão 3D e <br>Biomateriais</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/zabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/izabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:izabella.ribeiro@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/AnaJulia.png" alt="" class="user-image"> <!-- Ana Júlia -->
+                        <h2 class="user-name">Ana Júlia - 9º Período</h2>
+                        <p class="user-profession">Sistemas de Potência e <br>Máquinas Elétricas</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="mailto:anajulia.lima@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Luiz.png" alt="" class="user-image"> <!-- Luiz -->
+                        <h2 class="user-name">Luiz - 7º Período</h2>
+                        <p class="user-profession">Processamento de Imagens Médicas <br>e Instrumentação</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/luiz_spinola/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/luiz-felipe-spinola-silva-893340191/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:luiz.spinola@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
+                    
+                    <!-- 
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Izabella.png" alt="" class="user-image">  Nívea A ATUALIZAR 
+                        <h2 class="user-name">Izabella - 8º Período</h2>
+                        <p class="user-profession">Bioimpressão 3D e <br>Biomateriais</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/zabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/izabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:izabella.ribeiro@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Izabella.png" alt="" class="user-image"> Anna A ATUALIZAR 
+                        <h2 class="user-name">Izabella - 8º Período</h2>
+                        <p class="user-profession">Bioimpressão 3D e <br>Biomateriais</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/zabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/izabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:izabella.ribeiro@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Izabella.png" alt="" class="user-image"> Stephan A ATUALIZAR 
+                        <h2 class="user-name">Izabella - 8º Período</h2>
+                        <p class="user-profession">Bioimpressão 3D e <br>Biomateriais</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/zabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/izabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:izabella.ribeiro@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Izabella.png" alt="" class="user-image"> Lucas Leal A ATUALIZAR 
+                        <h2 class="user-name">Izabella - 8º Período</h2>
+                        <p class="user-profession">Bioimpressão 3D e <br>Biomateriais</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/zabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/izabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:izabella.ribeiro@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="images/Petianos/Izabella.png" alt="" class="user-image"> Raul A ATUALIZAR 
+                        <h2 class="user-name">Izabella - 8º Período</h2>
+                        <p class="user-profession">Bioimpressão 3D e <br>Biomateriais</p>
+                        <div class="icones">    
+                            <a href="https://www.instagram.com/zabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/izabellamribeiro/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:izabella.ribeiro@ufu.br">
+                                <i class="fa-solid fa-envelope"></i></a>
+                        </div>   
+                    </div>
+                    -->
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
+
+        <!-- Linkando o script-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        
+        <!-- Linkando o script com o .js-->
+        <script src="script.js"></script>
+    </section>
+
+<hr style="border: 1px solid #333; margin: 40px 0;">
 
 <!-- SESSÃO A ATUALIZAR CONSTANTEMENTE - NOTÍCIAS E EDITAIS -->
 <section class="news">
@@ -136,7 +269,7 @@
     </div>
 </section>
 
-<!--<hr style="border: 1px solid #4532; margin: 40px 0;"> -->
+<!--<hr style="border: 1px solid #333; margin: 40px 0;"> -->
 
 <!-- SESSÃO A CONSTRUIR - COMENTÁRIOS DE PETIANOS, EX-PETIANOS E ALCIMAR -->
 <!--
@@ -183,7 +316,7 @@
 
 <!-- Contato e Sobre o PET-->
 
-<hr style="border: 1px solid #4532; margin: 40px 0;">
+<hr style="border: 1px solid #333; margin: 40px 0;">
 
 <section class="contato">
     <h1>Nossa equipe está à disposição paraesclarecer dúvidas, oferecer <br>
@@ -191,22 +324,21 @@
     <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank" class="hero-btn">ENTRE EM CONTATO</a>
 </section>
 
-<hr style="border: 1px solid #4532; margin: 40px 0;">
+<hr style="border: 1px solid #333; margin: 40px 0;">
 
 <section class="sobre">
     <h4>O que é o PET?</h4>
     <p>O Programa de Educação Tutorial (PET) Engenharia Biomédica é um grupo acadêmico que busca integrar ensino, <br>
         pesquisa e extensão para complementar a formação dos alunos do curso. Composto por estudantes e orientado <br>
         por um tutor, o PET desenvolve atividades que estimulam o pensamento crítico, a inovação e o trabalho em equipe.</p>
-            <div class="icones">    
-                <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class = "fa fa-instagram"></i></a>
-                <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/?locale=pt_BR" target="_blank"><i class = "fa fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class = "fa fa-linkedin"></i></a>
-                <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class = "fa fa-envelope"></i></a>
-            </div>
+        <div class="icones">    
+            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/?locale=pt_BR" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>        
         <p>Feito por PET - Engenharia Biomédica UFU</p>
-    </section>
+</section>
 
-</script>
 </body>
 </html>
