@@ -63,8 +63,9 @@ O site é hospedado gratuitamente através do **GitHub Pages**, sendo automatica
 
 Desenvolvido por:
 
-Heitor Pereira 🌐[Perfil](https://https://github.com/heitorpnfc)
-Luiz Felipe 
+Heitor Pereira 🌐[GitHub Profile](https://github.com/heitorpnfc)
+
+Luiz Felipe 🌐[GitHub Profile](https://github.com/)
 
 🌐 [petengenhariabiomedica.github.io](https://petengenhariabiomedica.github.io)
 ---
