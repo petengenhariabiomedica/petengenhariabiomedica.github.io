@@ -28,6 +28,7 @@ nav{
 nav img{
     width: 200px;
 }
+
 .nav-links{
     flex: 1;
     text-align: right;
@@ -57,6 +58,145 @@ nav img{
     transition: 0.5s;
 }
 
+.inscricoes-header {
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/precalculo.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.inscricoes-container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.inscricao-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inscricao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.inscricao-titulo {
+    color: #0d2b52;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.inscricao-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #f6ad55;
+}
+
+.inscricao-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.inscricao-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.inscricao-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.inscricao-input:focus {
+    border-color: #1a4b8c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 75, 140, 0.2);
+}
+
+.inscricao-btn {
+    background: linear-gradient(to right, #0d2b52, #1a4b8c);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inscricao-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, #1a4b8c, #0d2b52);
+}
+
+.inscricao-info {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+}
+
+.inscricao-status {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    display: none;
+}
+
+.inscricao-success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.inscricao-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+/*------------------------------------*/
+/*-------- Responsividade ------------*/
+/*------------------------------------*/
+
+@media(max-width: 700px){
+    .inscricao-card {
+        padding: 1.5rem;
+    }
+    
+    .inscricao-input:valid {
+        border-color: #2ecc71;
+    }
+
+    .inscricao-input:invalid {
+        border-color: #e74c3c;
+    }
+}
 .nav-links ul li:hover::after{
     width: 100%;
 }
