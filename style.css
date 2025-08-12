@@ -15,12 +15,23 @@
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), 
                      url(images/banner2.png);
-    background-position: center top; /* Alinha no topo */
+    background-position: center; /* Alinha no topo */
     background-size: cover;
     position: relative;
     /* Garante que a parte inferior não seja mostrada */
     background-clip: border-box;
     overflow: hidden;
+}
+
+
+.subheader{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/PET\ MABI.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
 }
 
 /* Estilo para a logo no header */
@@ -102,6 +113,663 @@ nav img{
     text-align: right;
 }
 
+/* Estilos para as novas seções */
+
+/* Atividades */
+.activities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.activities-col {
+    flex-basis: 31%;
+    background: rgba(33, 51, 129, 0.1);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.activities-col i {
+    font-size: 50px;
+    color: #213381;
+    margin-bottom: 20px;
+}
+
+.activities-col h3 {
+    margin: 15px 0;
+}
+
+.activities-col:hover {
+    box-shadow: 0 0 20px 0 rgba(33, 51, 129, 0.2);
+    transform: translateY(-10px);
+}
+
+/* Informações do Curso */
+.course-info {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.course-col {
+    flex-basis: 48%;
+    padding: 20px;
+}
+
+.course-col h1 {
+    color: #213381;
+    margin-bottom: 20px;
+}
+
+.course-col p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.course-col img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Coordenação */
+.coordination {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.coord-col {
+    flex-basis: 48%;
+    display: flex;
+    align-items: center;
+    background: rgba(33, 51, 129, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.coord-col img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 3px solid #213381;
+}
+
+.coord-col h3 {
+    color: #213381;
+    margin-bottom: 10px;
+}
+
+.coord-col p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media(max-width: 700px){
+    .activities-col, .course-col, .coord-col {
+        flex-basis: 100%;
+    }
+    
+    .coord-col {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .coord-col img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Atualize o CSS da seção activities com estes estilos */
+.activities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.activities-col {
+    flex-basis: 31%;
+    background: rgba(33, 51, 129, 0.1);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    position: relative;
+}
+
+.activity-content {
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.activities-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(33, 51, 129, 0.2);
+}
+
+.activities-col:hover .activity-content {
+    background: rgba(33, 51, 129, 0.05);
+}
+
+.activities-col i {
+    font-size: 50px;
+    color: #213381;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.activities-col:hover i {
+    color: #1a4b8c;
+    transform: scale(1.1);
+}
+
+.activities-col h3 {
+    margin: 15px 0;
+    color: #213381;
+    transition: all 0.3s ease;
+}
+
+.activities-col:hover h3 {
+    color: #1a4b8c;
+}
+
+.activities-col p {
+    margin-bottom: 20px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.activity-link {
+    color: #213381;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.activities-col:hover .activity-link {
+    color: #1a4b8c;
+    transform: translateX(5px);
+}
+
+.activity-link i {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Seção Biomédica */
+.biomedical-section {
+    padding: 100px 0;
+    background-color: transparent;
+    position: relative;
+}
+/* Seção Nossas Atividades */
+.activities-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.activities-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    z-index: 0;
+    background-attachment: fixed;
+}
+
+.activities-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* Grid de Atividades */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+.activity-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(33, 51, 129, 0.15);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(33, 51, 129, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: #213381;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover .card-icon {
+    background: #213381;
+    color: white;
+}
+
+.activity-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #213381;
+}
+
+.activity-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.activity-cta {
+    color: #213381;
+    font-weight: 600;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.activity-cta i {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover .activity-cta i {
+    transform: translateX(5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-card {
+        padding: 30px 25px;
+    }
+}
+
+.biomedical-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: #213381;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Seção Notícias */
+.news-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.news-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.news-text {
+    flex: 1;
+    padding: 30px;
+}
+
+.news-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.news-item:hover .news-image img {
+    transform: scale(1.03);
+}
+
+.news-text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #213381;
+    margin-bottom: 20px;
+}
+
+.news-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.news-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #213381;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #213381;
+}
+
+.news-btn:hover {
+    background-color: transparent;
+    color: #213381;
+}
+
+/* Seção Notícias */
+.news-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.news-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news-box {
+    background-color: #f1f3f5; /* FUNDO CINZA VISÍVEL */
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.news-content {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 220px; /* Altura reduzida */
+}
+
+.news-text {
+    flex: 1;
+    padding: 25px;
+}
+
+.news-image {
+    flex: 1;
+    height: 100%;
+    min-height: 220px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news-text h3 {
+    font-size: 1.4rem; /* Tamanho reduzido */
+    margin-bottom: 12px;
+}
+
+.news-text p {
+    font-size: 1rem; /* Tamanho reduzido */
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.news-btn {
+    padding: 8px 20px; /* Botão menor */
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .news-content {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .news-image {
+        min-height: 180px;
+        width: 100%;
+    }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .news-item,
+    .news-item.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .news-text {
+        padding: 20px 0;
+    }
+    
+    .news-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #213381;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    font-weight: 300;
+}
+
+.biomedical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.biomedical-card {
+    background: white;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-align: left;
+}
+
+.biomedical-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(33, 51, 129, 0.1) 0%, rgba(33, 51, 129, 0) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.biomedical-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(33, 51, 129, 0.1);
+}
+
+.biomedical-card:hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(33, 51, 129, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: #213381;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.biomedical-card:hover .card-icon {
+    background: #213381;
+    color: white;
+}
+
+.biomedical-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #213381;
+    text-align: left;
+}
+
+.biomedical-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ufu-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #213381;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.ufu-btn i {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.ufu-btn:hover {
+    color: #1a4b8c;
+}
+
+.ufu-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .biomedical-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .biomedical-card {
+        padding: 30px 25px;
+    }
+}
 .nav-links ul li{
     list-style: none;
     display: inline-block;
