@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="subheader2">
         <nav>
-            <a href="index.html"><img src="images/Logo PET SFundo.png"></a>
+            <a href="index.html"><img src="images/Logo PET SFundo.png" alt="PET Engenharia Biomédica"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -67,7 +67,9 @@
                         title="Formato: 000.000.000-00" required>
                 </div>
                        
-                <button type="submit" class="submit-btn">Enviar Inscrição</button>
+                <button type="submit" class="submit-btn" id="submitButton">
+                    <span id="buttonText">Enviar Inscrição</span>
+                </button>
             </form>
         </div>
 
@@ -94,7 +96,7 @@
 
     <script>
         // Configuração para Google Sheets
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxhN2Re3vET7d6RlxLiT-tt8SWutb7AWb3_hu_4PNyW1kLkLEafyfKe2r5zWLBW-f1Bkg/exec'; // Substitua pela URL do seu Apps Script
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxhN2Re3vET7d6RlxLiT-tt8SWutb7AWb3_hu_4PNyW1kLkLEafyfKe2r5zWLBW-f1Bkg/exec';
 
         document.addEventListener('DOMContentLoaded', function() {
             // Atualiza o ano no footer
@@ -102,9 +104,15 @@
             
             const formInscricao = document.getElementById('formInscricao');
             const statusMessage = document.getElementById('statusMessage');
+            const submitBtn = document.getElementById('submitButton');
+            const buttonText = document.getElementById('buttonText');
             
-            formInscricao.addEventListener('submit', function(e) {
+            formInscricao.addEventListener('submit', async function(e) {
                 e.preventDefault();
+                
+                // Desabilita o botão e mostra spinner
+                submitBtn.disabled = true;
+                buttonText.innerHTML = '<span class="loading-spinner"></span> Enviando...';
                 
                 // Valida se os e-mails coincidem
                 const email = document.getElementById('email').value;
@@ -113,6 +121,8 @@
                 if (email !== confirmarEmail) {
                     statusMessage.textContent = 'Os e-mails digitados não coincidem!';
                     statusMessage.className = 'status-message error';
+                    submitBtn.disabled = false;
+                    buttonText.textContent = 'Enviar Inscrição';
                     return;
                 }
                 
@@ -120,38 +130,50 @@
                 statusMessage.textContent = 'Enviando inscrição...';
                 statusMessage.className = 'status-message';
                 
-                // Prepara os dados para envio
-                const formData = new FormData(formInscricao);
-                formData.append('curso', 'Palestra UFU & Center Shopping'); // Adiciona o nome do curso
-                formData.append('data', new Date().toLocaleString()); // Adiciona data/hora
-                
-                // Envia para o Google Sheets via Apps Script
-                fetch(scriptURL, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
+                try {
+                    // Prepara os dados para envio
+                    const formData = new FormData(formInscricao);
+                    formData.append('curso', 'Palestra UFU & Center Shopping');
+                    formData.append('data', new Date().toLocaleString());
+                    
+                    // Configura timeout de 8 segundos
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 8000);
+                    
+                    // Envia para o Google Sheets via Apps Script
+                    const response = await fetch(scriptURL, {
+                        method: 'POST',
+                        body: formData,
+                        signal: controller.signal
+                    });
+                    
+                    clearTimeout(timeoutId);
+                    
                     if (!response.ok) {
                         throw new Error('Erro na rede');
                     }
-                    return response.text();
-                })
-                .then(data => {
+                    
                     // Sucesso
-                    statusMessage.textContent = 'Inscrição realizada com sucesso!';
+                    statusMessage.textContent = '✅ Inscrição realizada com sucesso!';
                     statusMessage.className = 'status-message success';
                     formInscricao.reset();
-                })
-                .catch(error => {
+                    
+                } catch (error) {
                     // Erro
                     console.error('Erro:', error);
-                    statusMessage.textContent = 'Ocorreu um erro ao enviar sua inscrição. Por favor, tente novamente mais tarde.';
+                    statusMessage.textContent = error.name === 'AbortError' ? 
+                        'A conexão está lenta. Verifique sua inscrição mais tarde.' :
+                        'Ocorreu um erro ao enviar. Por favor, tente novamente.';
                     statusMessage.className = 'status-message error';
-                });
+                } finally {
+                    // Reabilita o botão
+                    submitBtn.disabled = false;
+                    buttonText.textContent = 'Enviar Inscrição';
+                }
             });
         });
 
-        // Funções para o menu mobile (IGUAL ao da página Sobre)
+        // Funções para o menu mobile
         function showMenu() {
             document.getElementById("navLinks").style.right = "0";
         }

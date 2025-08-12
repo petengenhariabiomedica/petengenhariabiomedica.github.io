@@ -30,6 +30,92 @@
             background-size: cover;
             position: relative;
     }
+    /* ===== MELHORIAS PARA FEEDBACK ===== */
+
+/* Spinner de carregamento */
+.loading-spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Estado do botão durante envio */
+.submit-btn:disabled {
+    background: #a0aec0 !important;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.submit-btn.processing {
+    position: relative;
+    color: transparent;
+}
+
+.submit-btn.processing::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Melhorias nas mensagens de status */
+.status-message {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: none;
+    align-items: center;
+}
+
+.status-message.success, 
+.status-message.error {
+    display: flex;
+}
+
+.status-message.success {
+    background-color: #f0fff4;
+    color: #2f855a;
+    border: 1px solid #c6f6d5;
+}
+
+.status-message.error {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #fed7d7;
+}
+
+.status-message i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Melhoria na validação do formulário */
+.form-input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #fc8181;
+}
+
+.form-input:valid:not(:focus):not(:placeholder-shown) {
+    border-color: #68d391;
+}
 
         nav {
             display: flex;
