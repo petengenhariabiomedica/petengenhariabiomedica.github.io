@@ -24,16 +24,6 @@
 }
 
 
-.subheader{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/PET\ MABI.jpeg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-
 /* Estilo para a logo no header */
 .header-logo {
     width: 300px; /* Ajuste conforme necessário */
@@ -472,6 +462,17 @@ nav img{
     font-size: 2.8rem;
     color: #213381;
     margin-bottom: 15px;
+    padding: 0px 20px 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: #213381;
+    margin-bottom: 0px;
+    padding: 0px 20px 20px;
     position: relative;
     display: inline-block;
 }
@@ -603,6 +604,81 @@ nav img{
     margin-bottom: 12px;
 }
 
+/* ANIMAÇÃO PARA O TEXTO SOBRE NÓS */
+.text-box h1 {
+    font-size: 62px;
+    animation: slideInFromLeft 1s ease-out forwards;
+    padding-bottom: 15px; /* Espaço para o risquinho */
+    opacity: 0;
+}
+
+.text-box p {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin: 10px 0 40px;
+    font-size: 15px;
+    color: #fff;
+    animation: slideInFromLeft 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Ajuste para o subheader */
+.subheader .text-box {
+    transform: none; /* Remove o transform anterior */
+    position: relative; /* Muda para relative para a animação funcionar */
+    top: auto;
+    left: auto;
+    width: 80%;
+    margin: 100px auto 0;
+}
+
+.text-box h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    animation: underlineExpand 0.8s ease-out 1s forwards; /* Animação com delay */
+}
+
+/* Animação para o risquinho */
+@keyframes underlineExpand {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* Ajuste para mobile */
+@media(max-width: 700px){
+    .text-box h1 {
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+    
+    .text-box h1::after {
+        height: 2px;
+    }
+}
+
 .news-text p {
     font-size: 1rem; /* Tamanho reduzido */
     line-height: 1.5;
@@ -643,10 +719,33 @@ nav img{
     }
 }
 
+/* ANIMAÇÕES DE ENTRADA */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animated-title {
+    animation: slideInFromLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+.animated-subtitle {
+    animation: slideInFromLeft 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -665,7 +764,70 @@ nav img{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
+/* Estilos com alinhamento vertical centralizado */
+.section-header-with-text {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    margin-bottom: 60px;
+    gap: 40px;
+}
 
+.header-text-box {
+    flex: 1;
+    background: rgba(33, 51, 129, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #213381;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%; /* Ocupa toda a altura disponível */
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+}
+
+.header-text-box p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.section-header1 {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100%; /* Ocupa toda a altura disponível */
+}
+
+/* Ajuste para o título e subtítulo */
+.section-title {
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    margin-top: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-header-with-text {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start; /* Alinha à esquerda em mobile */
+    }
+    
+    .header-text-box, .section-header1 {
+        width: 100%;
+        padding-right: 0;
+        height: auto; /* Altura automática em mobile */
+    }
+    
+    .section-header {
+        text-align: center; /* Centraliza em mobile */
+    }
+}
 .biomedical-card {
     background: white;
     border-radius: 10px;
@@ -677,6 +839,7 @@ nav img{
     z-index: 1;
     text-align: left;
 }
+
 
 .biomedical-card::before {
     content: '';
@@ -939,7 +1102,7 @@ nav img{
 }
 
 .text-box{
-    width: 90%;
+    width: 60%;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -1350,7 +1513,7 @@ h3{
 .subheader{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/PET\ MABI.jpeg);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/petianos2.jpeg);
     background-position: center;
     background-size: cover;
     text-align: center;

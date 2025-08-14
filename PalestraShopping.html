@@ -84,15 +84,19 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="modern-footer">
-        <div class="social-icons">
-            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p>© <span id="current-year"></span> PET Engenharia Biomédica UFU. Todos os direitos reservados.</p>
-    </footer>
+<section class="sobre">
+    <h4>O que é o PET?</h4>
+    <p>O Programa de Educação Tutorial (PET) Engenharia Biomédica é um grupo acadêmico que busca integrar ensino, <br>
+        pesquisa e extensão para complementar a formação dos alunos do curso. Composto por estudantes e orientado <br>
+        por um tutor, o PET desenvolve atividades que estimulam o pensamento crítico, a inovação e o trabalho em equipe.</p>
+        <div class="icones">    
+            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/?locale=pt_BR" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>        
+        <p>Feito por PET - Engenharia Biomédica UFU</p>
+</section>
 
     <script>
         // Configuração para Google Sheets
@@ -106,6 +110,46 @@
             const statusMessage = document.getElementById('statusMessage');
             const submitBtn = document.getElementById('submitButton');
             const buttonText = document.getElementById('buttonText');
+            
+            // Validação em tempo real para os campos
+            const inputs = document.querySelectorAll('.form-input');
+            
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.checkValidity()) {
+                        this.classList.remove('invalid');
+                        this.classList.add('valid');
+                    } else {
+                        this.classList.remove('valid');
+                        this.classList.add('invalid');
+                    }
+                });
+                
+                // Limpa as classes de validação quando o usuário começa a digitar
+                input.addEventListener('input', function() {
+                    this.classList.remove('valid', 'invalid');
+                });
+            });
+
+            // Máscara para CPF
+            const cpfInput = document.getElementById('cpf');
+            if (cpfInput) {
+                cpfInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    
+                    if (value.length > 3) {
+                        value = value.replace(/^(\d{3})/, '$1.');
+                    }
+                    if (value.length > 7) {
+                        value = value.replace(/^(\d{3})\.(\d{3})/, '$1.$2.');
+                    }
+                    if (value.length > 11) {
+                        value = value.replace(/^(\d{3})\.(\d{3})\.(\d{3})/, '$1.$2.$3-');
+                    }
+                    
+                    e.target.value = value.substring(0, 14);
+                });
+            }
             
             formInscricao.addEventListener('submit', async function(e) {
                 e.preventDefault();

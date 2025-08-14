@@ -109,11 +109,84 @@
 }
 
 /* Melhoria na validação do formulário */
-.form-input:invalid:not(:focus):not(:placeholder-shown) {
+.form-input.invalid {
     border-color: #fc8181;
 }
+/*------------------------------------*/
+/*-------- Estilos do Rodapé ---------*/
+/*------------------------------------*/
 
-.form-input:valid:not(:focus):not(:placeholder-shown) {
+.sobre {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0 30px;
+    background-color: #f8f9fa;
+    margin-top: 50px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.sobre h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0d2b52;
+    font-weight: 600;
+}
+
+.sobre p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones {
+    margin: 20px 0;
+}
+
+.icones a {
+    color: #0d2b52;
+    margin: 0 15px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.icones a:hover {
+    color: #1a4b8c;
+    transform: translateY(-3px);
+}
+
+.sobre > p:last-child {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .sobre {
+        padding: 40px 20px;
+    }
+    
+    .sobre h4 {
+        font-size: 24px;
+    }
+    
+    .sobre p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .icones a {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}
+
+.form-input.valid {
     border-color: #68d391;
 }
 

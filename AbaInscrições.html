@@ -24,7 +24,7 @@
 
         /* Header igual ao da página Sobre */
         .subheader {
-            min-height: calc(100vh - 120px);;
+            min-height: 30vh;
             width: 100%;
             background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/lousa.png);
             background-position: center;
@@ -103,19 +103,108 @@
             transition: 0.5s;
         }
 
+.titulo-eventos {
+    text-align: center;
+    padding: 10px 10px 20px; /* Espaçamento superior maior */
+    background-color: #f7fafc; /* Cor de fundo igual ao body */
+}
+
+.titulo-eventos .section-title {
+    color: #0d2b52; /* Azul escuro (combina com seu tema) */
+    margin-bottom: 15px;
+}
+
+.titulo-eventos p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
         .nav-links ul li:hover::after {
             width: 100%;
         }
 
         .text-box {
             width: 90%;
-            color: white;
+            color: #071244;
             position: absolute;
-            top: 50%;
+            top: 65%;
             left: 50%;
             transform: translate(-50%,-50%);
             text-align: center;
         }
+        /*------------------------------------*/
+/*-------- Estilos do Rodapé ---------*/
+/*------------------------------------*/
+
+.sobre {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0 30px;
+    background-color: #f8f9fa;
+    margin-top: 50px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.sobre h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0d2b52;
+    font-weight: 600;
+}
+
+.sobre p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones {
+    margin: 20px 0;
+}
+
+.icones a {
+    color: #0d2b52;
+    margin: 0 15px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.icones a:hover {
+    color: #1a4b8c;
+    transform: translateY(-3px);
+}
+
+.sobre > p:last-child {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .sobre {
+        padding: 40px 20px;
+    }
+    
+    .sobre h4 {
+        font-size: 24px;
+    }
+    
+    .sobre p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .icones a {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}
 
         .text-box h1 {
             font-size: 36px;
@@ -216,7 +305,7 @@
         .section-title {
             font-family: 'Poppins', sans-serif;
             font-size: 2.8rem;
-            color: #ffffff;
+            color: #071244;
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
@@ -229,7 +318,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #ffffff;
+            background: #071244;
         }
 
         
@@ -254,14 +343,14 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         
-        <div class="text-box">
-            <h1 class="section-title">Nossos Eventos</h1>
-            <p>Confira abaixo todas as inscrições disponíveis! </p>
-        </div>
     </section>
     <div class="wave-container">
         <div class="wave-image"></div>
     </div>
+    <section class="titulo-eventos">
+        <h1 class="section-title">Nossos Eventos</h1>
+        <p>Confira abaixo todas as inscrições disponíveis!</p>
+    </section>
 
     <!-- Seção de Minicursos -->
     <section class="minicursos-container">
@@ -312,15 +401,20 @@
         
 
     <!-- Rodapé -->
-    <footer class="modern-footer">
-        <div class="social-icons">
-            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p>© <span id="current-year"></span> PET Engenharia Biomédica UFU. Todos os direitos reservados.</p>
-    </footer>
+<section class="sobre">
+    <h4>O que é o PET?</h4>
+    <p>O Programa de Educação Tutorial (PET) Engenharia Biomédica é um grupo acadêmico que busca integrar ensino, <br>
+        pesquisa e extensão para complementar a formação dos alunos do curso. Composto por estudantes e orientado <br>
+        por um tutor, o PET desenvolve atividades que estimulam o pensamento crítico, a inovação e o trabalho em equipe.</p>
+        <div class="icones">    
+            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/?locale=pt_BR" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>        
+        <p>Feito por PET - Engenharia Biomédica UFU</p>
+</section>
+
 
     <script>
         // Atualiza o ano no footer
