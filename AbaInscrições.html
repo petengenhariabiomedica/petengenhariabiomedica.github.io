@@ -30,7 +30,8 @@
             background-position: center;
             background-size: cover;
             position: relative;
-            
+            background-clip: border-box;
+            overflow: hidden;
         }
 
         .wave-container {
@@ -68,7 +69,7 @@
             display: flex;
             padding: 2% 3%;
             justify-content: space-between;
-            align-items: center;
+            align-items: relative;
         }
 
         nav img {
@@ -84,7 +85,7 @@
             list-style: none;
             display: inline-block;
             padding: 8px 12px;
-            position: relative;
+            position: center;
         }
 
         .nav-links ul li a {

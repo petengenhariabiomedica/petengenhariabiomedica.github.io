@@ -23,6 +23,19 @@
     overflow: hidden;
 }
 
+.header2 {
+    min-height: calc(100vh - 120px); /* Reduz a altura pelo tamanho da onda */
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), 
+                     url(images/petianos2.jpeg);
+    background-position: center; /* Alinha no topo */
+    background-size: cover;
+    position: relative;
+    /* Garante que a parte inferior não seja mostrada */
+    background-clip: border-box;
+    overflow: hidden;
+}
+
 
 /* Estilo para a logo no header */
 .header-logo {
@@ -1514,7 +1527,7 @@ h3{
 /*------------------------------------*/
 
 .subheader{
-    min-height: 100vh;
+    min-height: 60vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/petianos2.jpeg);
     background-position: center;
