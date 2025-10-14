@@ -167,35 +167,6 @@
             </div>
         </div>
 
-        <!-- Notícia 2 -->
-        <div class="news-box">
-            <div class="news-content reverse">
-                <div class="news-text">
-                    <h3>PIX Inscrição - XVI SEB</h3>
-                    <p>Realize seu pagamento via PIX para a inscrição no XVI Simpósio.</p>
-                    <a href="https://nubank.com.br/cobrar/8k771x/6849b5be-7927-4618-b3c3-cc68dab3bbc7" class="news-btn">Acessar PIX</a>
-                </div>
-                <div class="news-image">
-                    <img src="images/PIX_SEB.png" alt="PIX SEB">
-                </div>
-            </div>
-        </div>
-
-                <div class="news-box">
-            <div class="news-content">
-                <div class="news-text">
-                    <h3>Informações sobre os Artigos - XVI SEB</h3>
-                    <p>Confira as informações sobre os artigos do XVI Simpósio de Engenharia Biomédica.</p>
-                    <a href="https://www.instagram.com/p/DMahoXwO_6O/" class="news-btn" target="_blank">Ver informações</a>
-                </div>
-                <div class="news-image">
-                    <img src="images/ArtigoSeb.png" alt="Resultado">
-                </div>
-            </div>
-        </div>
-
-
-    </div>
 </section>
 
 <!-- Adicione esta seção após a seção do curso
@@ -325,5 +296,26 @@
         <p>Feito por PET - Engenharia Biomédica UFU</p>
 </section>
 
+<script>
+    // Menu Mobile
+    var navLinks = document.getElementById("navLinks");
+    
+    function showMenu() {
+        navLinks.style.right = "0";
+        navLinks.classList.add("active");
+    }
+    
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+        navLinks.classList.remove("active");
+    }
+    
+    // Fechar menu ao clicar em um link (opcional)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hideMenu();
+        });
+    });
+</script>
 </body>
 </html>

@@ -239,14 +239,6 @@
             font-size: 16px;
         }
 
-        nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-        }
-
         .main-container {
             max-width: 1000px;
             margin: 3rem auto;
@@ -448,6 +440,9 @@
         
             nav img {
                 width: 100px; /* Tamanho reduzido para mobile */
+            }
+                .nav-links.active ~ .fa-bars {
+                display: none;
             }
         }
     
