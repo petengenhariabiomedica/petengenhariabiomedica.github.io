@@ -30,6 +30,15 @@
             background-size: cover;
             position: relative;
     }
+    .subheader3 {
+            min-height: 60vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), 
+                            url('images/intercambio.png');
+            background-position: center;
+            background-size: cover;
+            position: relative;
+    }
     /* ===== MELHORIAS PARA FEEDBACK ===== */
 
 /* Spinner de carregamento */

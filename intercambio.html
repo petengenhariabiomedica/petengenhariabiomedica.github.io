@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="subheader2">
+    <section class="subheader3">
         <nav>
             <a href="index.html"><img src="images/Logo PET SFundo.png" alt="PET Engenharia Biomédica"></a>
             <div class="nav-links" id="navLinks">
@@ -27,11 +27,12 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         
-        <div class="text-box">
-            <h1>Inscrição - Palestra UFU & Center Shopping</h1>
-            <p>Preencha o formulário abaixo para se inscrever em nossa palestra!</p>
-        </div>
     </section>
+
+    <div class="text-box">
+        <h1>Inscrição - Palestra Intercâmbio</h1>
+        <p>Preencha o formulário abaixo para se inscrever em nossa palestra!</p>
+    </div>
 
     <div class="main-container">
         <div class="form-card">
@@ -83,22 +84,16 @@
         </div>
     </div>
 
-<hr style="border: 1px solid #333; margin: 40px 0;">
-
     <!-- Rodapé -->
-<section class="sobre">
-    <h4>O que é o PET?</h4>
-    <p>O Programa de Educação Tutorial (PET) Engenharia Biomédica é um grupo acadêmico que busca integrar ensino, <br>
-        pesquisa e extensão para complementar a formação dos alunos do curso. Composto por estudantes e orientado <br>
-        por um tutor, o PET desenvolve atividades que estimulam o pensamento crítico, a inovação e o trabalho em equipe.</p>
-        <div class="icones">    
-            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/?locale=pt_BR" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        </div>        
-        <p>Feito por PET - Engenharia Biomédica UFU</p>
-</section>
+    <footer class="modern-footer">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/petengenhariabiomedica/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/PetEngenhariaBiomedicaUfu/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/pet-engenharia-biomédica-ufu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:pet.engenhariabiomedica.ufu@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>© <span id="current-year"></span> PET Engenharia Biomédica UFU. Todos os direitos reservados.</p>
+    </footer>
 
     <script>
         // Configuração para Google Sheets
@@ -139,7 +134,7 @@
                 try {
                     // Prepara os dados para envio
                     const formData = new FormData(formInscricao);
-                    formData.append('curso', 'Palestra UFU & Center Shopping');
+                    formData.append('curso', 'Minicurso Pré-Cálculo 2025.2');
                     formData.append('data', new Date().toLocaleString());
                     
                     // Configura timeout de 8 segundos
